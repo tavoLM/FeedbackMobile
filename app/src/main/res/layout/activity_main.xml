@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fadedbg2"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="35dp"
+                android:background="@drawable/bg_dropdown"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_action_camera"
+                android:layout_marginLeft="5dp"
+                tools:ignore="VectorDrawableCompat" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/editTextTextPersonName5"
+                    android:layout_width="96dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Model"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/bg_dropdown"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/editTextTextPersonName3"
+                    android:layout_width="96dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="VIN"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp" />
+
+                <EditText
+                    android:id="@+id/bodyno"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/bg_dropdown"
+                    android:hint="VIN"
+                    android:maxLength="6"
+                    android:inputType="number"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/editTextTextPersonName6"
+                    android:layout_width="96dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Area"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/bg_dropdown"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="96dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Zone"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerZone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/bg_dropdown"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="96dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Defect"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerDefect"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/bg_dropdown"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/editTextTextPersonName8"
+                    android:layout_width="96dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Location"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp" />
+                <Spinner
+                    android:id="@+id/spinnerLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/bg_dropdown"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/editTextTextPersonName2"
+                    android:layout_width="96dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Color"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/bg_dropdown"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/editTextTextPersonName7"
+                    android:layout_width="96dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Line"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/TCILines"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+                <include
+                    android:id="@+id/buttonSave"
+                    layout="@layout/progress_btn_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+
+                    android:layout_weight="1"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/buttonCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2dp"
+                    app:cardBackgroundColor="@android:color/holo_red_light"
+                    app:cardCornerRadius="5dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cancel"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/buttonLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2dp"
+                    app:cardBackgroundColor="@android:color/holo_blue_light"
+                    android:backgroundTint="#233080"
+                    app:cardCornerRadius="5dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Logout"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
