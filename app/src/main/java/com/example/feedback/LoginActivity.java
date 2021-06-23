@@ -21,8 +21,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginActivity extends AppCompatActivity {
-    //private final String baseUrl="http://10.114.43.200/IQISService/api/";
-    private final String baseUrl="http://10.114.3.35:92/api/";
+    
     TextView tvUser;
     TextView tvPassword;
     String ip;
@@ -42,10 +41,10 @@ public class LoginActivity extends AppCompatActivity {
         tvPassword = findViewById(R.id.password);
         view =  findViewById(R.id.btnLogin);
 
-        ip = "10.114.3.35";
-        dbUser = "sa";
-        dbPassword = "Kmmb4m$1";
-        dbName = "feedback";
+        ip = "";
+        dbUser = "";
+        dbPassword = "";
+        dbName = "";
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,107 +107,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        /*
-        SoapCall soapCall = new SoapCall(tvUser.getText().toString(),tvPassword.getText().toString()
-                ,station);
-        soapCall.execute();*/
+     
     }
-/*
-    public class SoapCall extends AsyncTask<String,Object,String> {
-
-        public static final String NAMESPACE = "http://tempuri.org/";
-        public static final String METHOD_NAME = "Login";
-        public static final String URL = "http://10.114.3.35:88/Service1.asmx?op=Login";
-        //public static final String SOAP_ACTION = "http://tempuri.org/LoginSql";
-        public static final String SOAP_ACTION = "http://tempuri.org/Login";
-        public int TimeOut = 30000;
-        String z="";
-        Boolean isSuccess = false;
-
-        String response;
-
-        String user, password, station;
-
-        public SoapCall(){}
-
-        public SoapCall(String user,String password, String station){
-            this.user = user;
-            this.password = password;
-            this.station = station;
-        }
-
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            //start progress bar here
-
-        }
-
-        @SuppressLint("WrongThread")
-        @Override
-        protected String doInBackground(String... strings) {
-            //create soap object
-            SoapObject request = new SoapObject(NAMESPACE,METHOD_NAME);
-            request.addProperty("user",tvUser.getText().toString());
-            request.addProperty("password",tvPassword.getText().toString());
-            request.addProperty("process",station);
-            SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
-            envelope.dotNet = true;
-            envelope.setOutputSoapObject(request);
-            HttpTransportSE transportSE = new HttpTransportSE(URL,TimeOut);
-
-            try
-            {
-                transportSE.call(SOAP_ACTION,envelope);
-                response =  envelope.getResponse().toString();
-
-                if(response.toString().equals("NO DATA"))
-                {
-                    z = "credenciales invalidas!";
-                    isSuccess = false;
-                }else if(response.toString().equals("ERROR"))
-                {
-                    z = "Algo salio mal, Llama a IT";
-                    isSuccess = false;
-                }
-                else{
-                    z = "Login Exitoso!";
-                    isSuccess = true;
-                }
-
-
-            }catch(Exception ex){
-                isSuccess = false;
-                z = ex.getMessage();
-            }
-
-
-            return z;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            //stop progressbar
-
-            Toast.makeText(LoginActivity.this, s, Toast.LENGTH_SHORT).show();
-            if(isSuccess)
-            {
-                progressButton.buttonFinished();
-                // aqui se define a que vista se va ir dependiendo del usuario.
-                Intent intent;
-
-                intent = new Intent(LoginActivity.this, MainActivity.class);
-                intent.putExtra("userName",this.user);
-                intent.putExtra("station",this.station);
-                startActivity(intent);
-                LoginActivity.this.finish();
-            }
-            else{
-                progressButton.buttonReset("Login");
-            }
-        }
-    }*/
 
 }
